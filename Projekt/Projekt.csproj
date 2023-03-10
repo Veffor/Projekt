@@ -7,4 +7,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="gowno.jpg" />
+    <None Remove="ojtak.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="gowno.jpg" />
+    <Resource Include="ojtak.PNG" />
+  </ItemGroup>
+
 </Project>
