@@ -8,13 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="enemy1.png" />
     <None Remove="gowno.jpg" />
-    <None Remove="ojtak.PNG" />
+    <None Remove="gracz.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="enemy1.png" />
     <Resource Include="gowno.jpg" />
-    <Resource Include="ojtak.PNG" />
+    <Resource Include="gracz.jpg" />
   </ItemGroup>
 
 </Project>
