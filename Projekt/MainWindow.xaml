@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="Gra" Height="450" Width="800">
     <Grid>
-        <Image x:Name="zdj_przeciwnika" HorizontalAlignment="Left" Height="115" Margin="684,0,0,0" VerticalAlignment="Top" Width="115"/>
+        <Image x:Name="zdj_przeciwnika" HorizontalAlignment="Left" Height="115" Margin="684,0,0,0" VerticalAlignment="Top" Width="115" Source="/enemy5.jpg" />
 
         <Image x:Name="zdj_twoje" HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="115" Margin="3,0,0,0" Source="/gracz.jpg"/>
-        <TextBlock x:Name="nazwa_przeciwnika" HorizontalAlignment="Left" Margin="684,118,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="24" Width="106"/>
-        <TextBlock x:Name="nazwa_twoja" HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Height="24" Text="Gracz"/>
-        <Label x:Name="hp_twoje_zmienne" Content="Label" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Height="25" Width="40"/>
+        <TextBlock x:Name="nazwa_przeciwnika_okienko" HorizontalAlignment="Left" Margin="670,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="24" Width="120"/>
+        <TextBlock x:Name="nazwa_twoja" HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Height="24" Text=""/>
+        <Label x:Name="hp_twoje_zmienne" Content="" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Height="25" Width="40"/>
         <Label x:Name="hp_twoje_max" Content="/100" HorizontalAlignment="Left" Margin="38,142,0,0" VerticalAlignment="Top"/>
         <Label x:Name="hp_przeciwnika_max" Content="/100" HorizontalAlignment="Left" Margin="756,141,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="hp_przeciwnika_zmienne" Content="Label" HorizontalAlignment="Left" Margin="727,141,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button_atak" Content="ATAK" HorizontalAlignment="Left" Margin="58,217,0,0" VerticalAlignment="Top" Height="90" Width="200"/>
+        <Label x:Name="hp_przeciwnika_zmienne" Content="" HorizontalAlignment="Left" Margin="727,141,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_atak" Content="ATAK" HorizontalAlignment="Left" Margin="58,217,0,0" VerticalAlignment="Top" Height="90" Width="200" Click="button_atak_Click" />
         <Button x:Name="button_heal" Content="HEAL" HorizontalAlignment="Left" Margin="520,217,0,0" VerticalAlignment="Top" Height="90" Width="200"/>
         <Button x:Name="button_def" Content="DEF" HorizontalAlignment="Left" Margin="58,325,0,0" VerticalAlignment="Top" Height="90" Width="200"/>
         <Button x:Name="button_run" Content="RUN" HorizontalAlignment="Left" Margin="520,325,0,0" VerticalAlignment="Top" Height="90" Width="200"/>
