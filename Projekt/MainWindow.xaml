@@ -7,23 +7,29 @@
         mc:Ignorable="d"
         Title="Gra" Height="450" Width="800">
     <Grid>
-        <Image x:Name="zdj_przeciwnika" HorizontalAlignment="Left" Height="115" Margin="684,0,0,0" VerticalAlignment="Top" Width="115" Source="/enemy5.jpg" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="577*"/>
+            <ColumnDefinition Width="223*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="zdj_przeciwnika" HorizontalAlignment="Left" Height="127" Margin="56,14,0,0" VerticalAlignment="Top" Width="166" Source="/enemy5.jpg" Grid.Column="1" />
 
-        <Image x:Name="zdj_twoje" HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="115" Margin="3,0,0,0" Source="/gracz.jpg"/>
-        <TextBlock x:Name="nazwa_przeciwnika_okienko" HorizontalAlignment="Left" Margin="670,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="24" Width="120"/>
-        <TextBlock x:Name="nazwa_twoja" HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Height="24" Text=""/>
+        <Image x:Name="zdj_twoje" HorizontalAlignment="Left" Height="128" VerticalAlignment="Top" Width="155" Margin="3,14,0,0" Source="/rycerz.png"/>
+        <TextBlock x:Name="nazwa_przeciwnika_okienko" HorizontalAlignment="Left" Margin="103,1,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="24" Width="120" Grid.Column="1"/>
+        <TextBlock x:Name="nazwa_twoja" HorizontalAlignment="Left" Margin="2,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Height="24" Text=""/>
         <Label x:Name="hp_twoje_zmienne" Content="" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Height="25" Width="40"/>
         <Label x:Name="hp_twoje_max" Content="/100" HorizontalAlignment="Left" Margin="38,142,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="hp_przeciwnika_max" Content="/100" HorizontalAlignment="Left" Margin="756,141,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="hp_przeciwnika_zmienne" Content="" HorizontalAlignment="Left" Margin="727,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="hp_przeciwnika_max" Content="/100" HorizontalAlignment="Left" Margin="160,141,0,0" VerticalAlignment="Top" Width="53" Grid.Column="1"/>
+        <Label x:Name="hp_przeciwnika_zmienne" Content="" HorizontalAlignment="Left" Margin="129,141,0,0" VerticalAlignment="Top" Width="31" Grid.Column="1"/>
         <Button x:Name="button_atak" Content="ATAK" HorizontalAlignment="Left" Margin="58,217,0,0" VerticalAlignment="Top" Height="90" Width="200" Click="button_atak_Click" />
-        <Button x:Name="button_heal" Content="HEAL" HorizontalAlignment="Left" Margin="520,217,0,0" VerticalAlignment="Top" Height="90" Width="200"/>
-        <Button x:Name="button_def" Content="DEF" HorizontalAlignment="Left" Margin="58,325,0,0" VerticalAlignment="Top" Height="90" Width="200"/>
-        <Button x:Name="button_run" Content="RUN" HorizontalAlignment="Left" Margin="520,325,0,0" VerticalAlignment="Top" Height="90" Width="200"/>
-
-
-
-
+        <Button x:Name="button_heal" Content="HEAL" HorizontalAlignment="Left" Margin="520,217,0,0" VerticalAlignment="Top" Height="90" Width="200" Grid.ColumnSpan="2" Click="button_heal_Click"/>
+        <Button x:Name="button_def" Content="DEF" HorizontalAlignment="Left" Margin="58,325,0,0" VerticalAlignment="Top" Height="90" Width="200" Click="button_def_Click"/>
+        <Button x:Name="button_run" Content="RUN" HorizontalAlignment="Left" Margin="520,325,0,0" VerticalAlignment="Top" Height="90" Width="200" Grid.ColumnSpan="2" Click="button_run_Click"/>
+        <Border x:Name="___Brak_nazwy_" BorderBrush="Black" BorderThickness="1" Margin="176,14,196,304" Grid.ColumnSpan="2">
+            <TextBlock x:Name="log_bitwy"  HorizontalAlignment="Center" Text="" TextWrapping="Wrap" FontSize="14" FontWeight="Bold" Foreground="#FF0D0D0E" OpacityMask="Black" Width="402" TextAlignment="Center"/>
+        </Border>
+        <Label x:Name="mana_zmienna" Content="" HorizontalAlignment="Left" Height="23" Margin="18,168,0,0" VerticalAlignment="Top" Width="45"/>
 
     </Grid>
+
+
 </Window>
