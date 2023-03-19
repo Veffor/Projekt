@@ -11,7 +11,7 @@ namespace Klasy1
         private int hp;
         private int mana;
         private string nazwa_gracza;
-        private int atak_gracza;
+        private int atak_gracza; // atak gracza i atak przeciwnika jest właściwie nie potrzebny, ale nie chce mi się tego usuwać
         private bool czy_żyje = true;
 
         public Gracz(int hp, int mana, string nazwa_gracza, int atak_gracza, bool czy_żyje)

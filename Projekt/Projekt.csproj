@@ -24,8 +24,6 @@
   <ItemGroup>
     <Resource Include="enemy1.png" />
     <Resource Include="enemy2.png" />
-    <Resource Include="enemy5.jpg" />
-    <Resource Include="gowno.jpg" />
     <Resource Include="rycerz.png" />
   </ItemGroup>
 

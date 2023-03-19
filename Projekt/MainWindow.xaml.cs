@@ -52,7 +52,7 @@ namespace Projekt
 
 
 
-            BitmapImage obrazek = new BitmapImage();
+            BitmapImage obrazek = new BitmapImage(); // odczytywanie plików można uznać jako odczytywanie obrazków 😎
             obrazek.BeginInit();
             
             
@@ -69,10 +69,6 @@ namespace Projekt
                     obrazek.UriSource = new Uri("/enemy2.png", UriKind.Relative);
                     break;
 
-
-
-                    
-                   
                 }
             obrazek.EndInit();
             zdj_przeciwnika.Source = obrazek;
@@ -83,11 +79,16 @@ namespace Projekt
         private void button_atak_Click(object sender, RoutedEventArgs e)
         {
             Random r1 = new Random();
-            var a = przeciwnik1.Hp_przeciwnika - r1.Next(5,16);
+
+            int c = r1.Next(5, 16);
+            int d = r1.Next(5, 16);
+            var a = przeciwnik1.Hp_przeciwnika - c ;
             hp_przeciwnika_zmienne.Content = a;
             przeciwnik1.Hp_przeciwnika = a;
 
-            var b = gracz1.Hp - r1.Next(5,16);
+
+
+            var b = gracz1.Hp - d;
             hp_twoje_zmienne.Content = b;
             gracz1.Hp = b;
             if(gracz1.Mana < 15) {
@@ -98,7 +99,7 @@ namespace Projekt
 
             if (przeciwnik1.Hp_przeciwnika > 0)
             {
-                log_bitwy.Text = "Uderzasz przeciwnikowi za" + " " + a + "" + "punktów obrażeń, lecz ten oddaje za" + " " + b + " " + "punktów obrażeń";
+                log_bitwy.Text = "Uderzasz przeciwnikowi za" + " " + c + "" + "punktów obrażeń, lecz ten oddaje za" + " " + d + " " + "punktów obrażeń";
             }
             else if (przeciwnik1.Hp_przeciwnika <= 0)
             {
@@ -130,6 +131,33 @@ namespace Projekt
                 przeciwnik1.Nazwa_przeciwnika = "przeciwnik jakiś";
                 przeciwnik1.Czy_żyje = true;
                 log_bitwy.Text = "Przeciwnik się odradza...";
+
+                BitmapImage obrazek = new BitmapImage();
+                obrazek.BeginInit();
+
+
+
+
+                int przeciwnik_wyświetlany = r1.Next(1, 3); // ten switch tak działa w dwóch piątych
+
+                switch (przeciwnik_wyświetlany)
+                {
+                    case 1:
+                        obrazek.UriSource = new Uri("/enemy1.png", UriKind.Relative);
+                        break;
+                    case 2:
+                        obrazek.UriSource = new Uri("/enemy2.png", UriKind.Relative);
+                        break;
+
+                }
+                obrazek.EndInit();
+                zdj_przeciwnika.Source = obrazek;
+
+
+
+
+
+
             }
             else if (!gracz1.Czy_żyje)
             {
@@ -191,6 +219,29 @@ namespace Projekt
                 przeciwnik1.Nazwa_przeciwnika = "przeciwnik jakiś";
                 przeciwnik1.Czy_żyje = true;
                 log_bitwy.Text = "Przeciwnik się odradza...";
+
+                BitmapImage obrazek = new BitmapImage();
+                obrazek.BeginInit();
+
+
+
+
+                int przeciwnik_wyświetlany = r1.Next(1, 3); // ten switch tak działa w dwóch piątych
+
+                switch (przeciwnik_wyświetlany)
+                {
+                    case 1:
+                        obrazek.UriSource = new Uri("/enemy1.png", UriKind.Relative);
+                        break;
+                    case 2:
+                        obrazek.UriSource = new Uri("/enemy2.png", UriKind.Relative);
+                        break;
+
+                }
+                obrazek.EndInit();
+                zdj_przeciwnika.Source = obrazek;
+
+
             }
             else if (!gracz1.Czy_żyje)
             {
@@ -248,6 +299,29 @@ namespace Projekt
                     przeciwnik1.Nazwa_przeciwnika = "przeciwnik jakiś";
                     przeciwnik1.Czy_żyje = true;
                     log_bitwy.Text = "Przeciwnik się odradza...";
+
+                    BitmapImage obrazek = new BitmapImage();
+                    obrazek.BeginInit();
+
+
+                    Random r1 = new Random();
+
+                    int przeciwnik_wyświetlany = r1.Next(1, 3);
+
+                    switch (przeciwnik_wyświetlany)
+                    {
+                        case 1:
+                            obrazek.UriSource = new Uri("/enemy1.png", UriKind.Relative);
+                            break;
+                        case 2:
+                            obrazek.UriSource = new Uri("/enemy2.png", UriKind.Relative);
+                            break;
+
+                    }
+                    obrazek.EndInit();
+                    zdj_przeciwnika.Source = obrazek;
+
+
                 }
                 else if (!gracz1.Czy_żyje)
                 {
