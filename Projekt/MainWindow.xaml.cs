@@ -23,6 +23,7 @@ namespace Projekt
     {
         private Gracz gracz1 = new(100, 15, "", 10, true);
         private Przeciwnik przeciwnik1 = new (100,10,"przeciwnik potężny",true);
+        public int iloscPrzeciwnikow = 1;
 
         
 
@@ -40,7 +41,7 @@ namespace Projekt
             string nazwa_przeciwnika = "przeciwnik numer 1";
             var a = gracz1.Mana + "/15";
 
-        
+            
            
             hp_twoje_zmienne.Content = hp_gracza;
             hp_przeciwnika_zmienne.Content = hp_przeciwnika;
@@ -118,6 +119,9 @@ namespace Projekt
             {
                 przeciwnik1.Czy_żyje = false;
                 log_bitwy.Text = "Pokonałeś przeciwnika!";
+                iloscPrzeciwnikow++;
+                przeciwnik1.Nazwa_przeciwnika = "przeciwnik numer" + " " + iloscPrzeciwnikow;
+                nazwa_przeciwnika_okienko.Text = przeciwnik1.Nazwa_przeciwnika;
             }
             else if (gracz1.Hp <= 0)
             {
@@ -206,6 +210,9 @@ namespace Projekt
             {
                 przeciwnik1.Czy_żyje = false;
                 log_bitwy.Text = "Pokonałeś przeciwnika!";
+                iloscPrzeciwnikow++;
+                przeciwnik1.Nazwa_przeciwnika = "przeciwnik numer" + " " + iloscPrzeciwnikow;
+                nazwa_przeciwnika_okienko.Text = przeciwnik1.Nazwa_przeciwnika;
             }
             else if (gracz1.Hp <= 0)
             {
@@ -286,6 +293,9 @@ namespace Projekt
                 {
                     przeciwnik1.Czy_żyje = false;
                     log_bitwy.Text = "Pokonałeś przeciwnika!";
+                    iloscPrzeciwnikow++;
+                    przeciwnik1.Nazwa_przeciwnika = "przeciwnik numer" + " " + iloscPrzeciwnikow;
+                    nazwa_przeciwnika_okienko.Text = przeciwnik1.Nazwa_przeciwnika;
                 }
                 else if (gracz1.Hp <= 0)
                 {
